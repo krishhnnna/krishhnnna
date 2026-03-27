@@ -6,6 +6,7 @@
         .header { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #bb9af7; }
         .total-label { font: 700 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f7768e; }
         .total-value { font: 800 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9ece6a; }
+        .rank { font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; }
     </style>
     
     <rect x="0.5" y="0.5" width="599" height="299" rx="8" fill="#1a1b27" stroke="#383e59" stroke-width="1"/>
@@ -14,41 +15,64 @@
     <text x="25" y="35" class="title">🏆 Competitive Programming Stats</text>
 
     <!-- Column Headers -->
-    <text x="30" y="70" class="header">Platform</text>
-    <text x="150" y="70" class="header">Profiles</text>
-    <text x="360" y="70" class="header">Rating (Max)</text>
-    <text x="520" y="70" class="header">Solved</text>
+    <text x="50" y="70" class="header">Platform</text>
+    <text x="180" y="70" class="header">Profiles</text>
+    <text x="370" y="70" class="header">Rating / Rank</text>
+    <text x="540" y="70" class="header">Solved</text>
     <line x1="25" y1="80" x2="575" y2="80" stroke="#383e59" stroke-width="1"/>
 
-    <!-- LeetCode -->
-    <text x="30" y="110" class="label">🟡 LeetCode</text>
-    <text x="150" y="110" class="label">wtffff__, Hackker_69</text>
-    <text x="360" y="110" class="label">1919 (Knight)</text>
-    <text x="520" y="110" class="value">417</text>
+    <!-- LeetCode icon -->
+    <g transform="translate(25, 96) scale(0.65)">
+      <path fill="#FFA116" d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+    </g>
+    <text x="50" y="110" class="label">LeetCode</text>
+    <text x="180" y="110" class="label">wtffff__, Hackker_69</text>
+    <text x="370" y="110" class="label">1919</text>
+    <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
+    <text x="540" y="110" class="value">417</text>
 
-    <!-- Codeforces -->
-    <text x="30" y="140" class="label">🔵 Codeforces</text>
-    <text x="150" y="140" class="label">Hackker_69, krishnnna</text>
-    <text x="360" y="140" class="label">1623 (Expert)</text>
-    <text x="520" y="140" class="value">358</text>
+    <!-- Codeforces icon -->
+    <g transform="translate(25, 126) scale(0.65)">
+      <path fill="#1F8ACB" d="M4.5 7.5C5.328 7.5 6 8.172 6 9v10.5c0 .828-.672 1.5-1.5 1.5h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3zm9-4.5c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5h-3c-.827 0-1.5-.672-1.5-1.5v-15c0-.828.673-1.5 1.5-1.5h3zm9 7.5c.828 0 1.5.672 1.5 1.5v7.5c0 .828-.672 1.5-1.5 1.5h-3c-.828 0-1.5-.672-1.5-1.5V12c0-.828.672-1.5 1.5-1.5h3z"/>
+    </g>
+    <text x="50" y="140" class="label">Codeforces</text>
+    <text x="180" y="140" class="label">Hackker_69, krishnnna</text>
+    <text x="370" y="140" class="label">1623</text>
+    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Expert</text>
+    <text x="540" y="140" class="value">358</text>
 
-    <!-- CodeChef -->
-    <text x="30" y="170" class="label">🟠 CodeChef</text>
-    <text x="150" y="170" class="label">hackker_69</text>
-    <text x="360" y="170" class="label">1536 (2★)</text>
-    <text x="520" y="170" class="value">45</text>
+    <!-- CodeChef icon -->
+    <g transform="translate(25, 156) scale(0.65)">
+      <path fill="#5B4638" d="M11.2574.0039c-.37.0101-.7353.041-1.1003.095C9.6164.153 9.0766.4236 8.482.694c-.757.3244-1.5147.6486-2.2176.7027-1.1896.3785-1.568.919-1.8925 1.3516 0 .054-.054.1079-.054.1079-.4325.865-.4873 1.73-.325 2.5952.1621.5407.3786 1.0282.5408 1.5148.3785 1.0274.7578 2.0007.92 3.1362.1622.3244.3235.7571.4316 1.1897.2704.8651.542 1.8383 1.353 2.5952l.0057-.0028c.0175.0183.0301.0387.0482.0568.0072-.0036.0141-.0063.0213-.0099l-.0213-.5849c.6489-.9733 1.5673-1.6221 2.865-1.8925.5195-.1093 1.081-.1497 1.6625-.1278a8.7733 8.7733 0 0 1 1.7988.2357c1.4599.3785 2.595 1.1358 2.6492 1.7846.0273.3549.0398.6952.0326 1.0364-.001.064-.0046.1285-.007.193l.1362.0682c.075-.0375.1424-.107.2059-.1902.0008-.001.002-.002.0028-.0028.0018-.0023.0039-.0061.0057-.0085.0396-.0536.0747-.1236.1107-.1931.0188-.0377.0372-.0866.0554-.1292.2048-.4622.362-1.1536.538-1.9635.0541-.2703.1092-.4864.1633-.7027.4326-.9733 1.0266-1.8382 1.6213-2.6492.9733-1.3518 1.8928-2.5962 1.7846-4.0561-1.784-3.4608-4.2718-4.0017-5.5695-4.272-.2163-.0541-.3233-.0539-.4856-.108-1.3382-.2433-2.4945-.3953-3.6046-.3648z"/>
+    </g>
+    <text x="50" y="170" class="label">CodeChef</text>
+    <text x="180" y="170" class="label">hackker_69</text>
+    <text x="370" y="170" class="label">1536</text>
+    <text x="420" y="170" class="rank" fill="#e0af68">2★</text>
+    <text x="540" y="170" class="value">45</text>
 
-    <!-- AtCoder -->
-    <text x="30" y="200" class="label">🔴 AtCoder</text>
-    <text x="150" y="200" class="label">krishnnna</text>
-    <text x="360" y="200" class="label">747 (Brown)</text>
-    <text x="520" y="200" class="value">96</text>
+    <!-- AtCoder icon (simple "A" mark) -->
+    <g transform="translate(25, 186) scale(0.65)">
+      <circle cx="12" cy="12" r="11" fill="none" stroke="#dc143c" stroke-width="2"/>
+      <text x="12" y="17" text-anchor="middle" fill="#dc143c" style="font: bold 14px 'Segoe UI', Sans-Serif;">A</text>
+    </g>
+    <text x="50" y="200" class="label">AtCoder</text>
+    <text x="180" y="200" class="label">krishnnna</text>
+    <text x="370" y="200" class="label">747</text>
+    <text x="420" y="200" class="rank" fill="#bb9af7">Brown</text>
+    <text x="540" y="200" class="value">96</text>
 
-    <!-- CSES & Others -->
-    <text x="30" y="230" class="label">🌐 CSES &amp; Others</text>
-    <text x="150" y="230" class="label">—</text>
-    <text x="360" y="230" class="label">—</text>
-    <text x="520" y="230" class="value">102</text>
+    <!-- CSES & Others icon (globe) -->
+    <g transform="translate(25, 216) scale(0.65)">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="#73daca" stroke-width="1.5"/>
+      <ellipse cx="12" cy="12" rx="5" ry="10" fill="none" stroke="#73daca" stroke-width="1.2"/>
+      <line x1="2" y1="12" x2="22" y2="12" stroke="#73daca" stroke-width="1.2"/>
+      <line x1="12" y1="2" x2="12" y2="22" stroke="#73daca" stroke-width="1.2"/>
+    </g>
+    <text x="50" y="230" class="label">CSES &amp; Others</text>
+    <text x="180" y="230" class="label">—</text>
+    <text x="370" y="230" class="label">—</text>
+    <text x="540" y="230" class="value">102</text>
 
     <line x1="25" y1="245" x2="575" y2="245" stroke="#383e59" stroke-width="1"/>
 
