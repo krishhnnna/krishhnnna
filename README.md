@@ -16,21 +16,43 @@ Here are some ideas to get you started:
 -->
 ---
 
-## 📊 GitHub & Competitive Programming Stats
+## 🏆 Competitive Programming Stats
+
+---
+
+### 🟡 LeetCode
 
 <div align="center">
 
-  <!-- GitHub Stats Card -->
-  <img src="https://github-readme-stats.vercel.app/api?username=krishhnnna&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&rank_icon=github" alt="GitHub Stats" height="180"/>
-
-  <!-- Top Languages Card -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishhnnna&layout=compact&theme=tokyonight&langs_count=8&hide_border=false" alt="Top Languages" height="180"/>
+| `wrffff__` | `Hackker_69` |
+|:---:|:---:|
+| <img src="https://leetcard.jacoblin.cool/wrffff__?theme=dark&font=Nunito&ext=heatmap" width="380"/> | <img src="https://leetcard.jacoblin.cool/Hackker_69?theme=dark&font=Nunito&ext=heatmap" width="380"/> |
 
 </div>
+
+---
+
+### 🔵 Codeforces
 
 <div align="center">
 
-  <!-- LeetCode Stats Card -->
-  <img src="https://leetcard.jacoblin.cool/wtffff__?theme=dark&font=Nunito&ext=heatmap&site=leetcode" alt="LeetCode Stats" width="495"/>
+| `Hackker_69` | `krishnnna` |
+|:---:|:---:|
+| <img src="https://codeforces-readme-stats.vercel.app/api/card?handle=Hackker_69&theme=dark&force_username=true" width="380"/> | <img src="https://codeforces-readme-stats.vercel.app/api/card?handle=krishnnna&theme=dark&force_username=true" width="380"/> |
 
 </div>
+
+---
+
+### 🟠 CodeChef &nbsp;|&nbsp; 🔴 AtCoder &nbsp;|&nbsp; 🟢 CSES
+
+<div align="center">
+
+[![CodeChef](https://cp-logo.vercel.app/codechef/hackker_69)](https://www.codechef.com/users/hackker_69)
+&nbsp;&nbsp;
+[![AtCoder](https://cp-logo.vercel.app/atcoder/krishnnna)](https://atcoder.jp/users/krishnnna)
+&nbsp;&nbsp;
+[![CSES](https://img.shields.io/badge/CSES-krishnannnna-1E90FF?style=flat&logo=codeforces&logoColor=white)](https://cses.fi/user/krishnannnna)
+
+</div>
+
