@@ -3,52 +3,53 @@
 ---
 
 <!-- COMBINED_STATS_START -->
-## 🏆 Competitive Programming Stats
-
-> 🤖 Auto-updated daily &nbsp;|&nbsp; Last sync: `2026-03-27 21:13 UTC`
-
----
-
-### 🌐 Grand Total — `775` Problems Solved
-
 <div align="center">
 
-| Platform | Accounts | ✅ Solved | 📈 Best Rating |
-|:---:|:---:|:---:|:---:|
-| 🟡 **LeetCode** | `wtffff__` + `Hackker_69` | **417** | 1919 ⚔️ Knight |
-| 🔵 **Codeforces** | `Hackker_69` + `krishnnna` | **358** | 1623 · 🔵 Expert |
-| 🟠 **CodeChef** | `hackker_69` | **0** | 1536 2★ |
-| 🔴 **AtCoder** | `krishnnna` | **0** | 747 (Max) |
-| 🟢 **CSES** | `krishnannnna` | **0** | — |
-| | 🏆 **Grand Total** | **775** | |
+## 🏆 Competitive Programming
+
+*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 21:27 UTC*
 
 </div>
 
 ---
 
-### 🟡 LeetCode — Both Accounts Combined
+### ⚡ Total: `916` problems solved across 5 platforms
+
+<div align="center">
+
+| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| **Solved** | **417** | **358** | **45** | **96** | **0 ⚠️** |
+| **Best Rating** | 1919 | 1623 | 1536 | 747 | — |
+| **Rank/Title** | ⚔️ Knight | 🔵 Expert | 2★ | 🟤 Brown | — |
+
+</div>
+
+---
+
+### 🟡 LeetCode
 
 <div align="center">
 
 | Account | Total | 🟢 Easy | 🟡 Medium | 🔴 Hard |
 |:---:|:---:|:---:|:---:|:---:|
-| `wtffff__` | **284** | 66 | 169 | 49 |
-| `Hackker_69` | **133** | 21 | 64 | 48 |
-| ✨ **Combined** | **417** | 87 | 233 | 97 |
+| [`wtffff__`](https://leetcode.com/wtffff__) | **284** | 66 | 169 | 49 |
+| [`Hackker_69`](https://leetcode.com/Hackker_69) | **133** | 21 | 64 | 48 |
+| **Combined** | **417** | 87 | 233 | 97 |
 
 </div>
 
 ---
 
-### 🔵 Codeforces — Both Accounts Combined
+### 🔵 Codeforces
 
 <div align="center">
 
-| Handle | ✅ Solved | Rating | Max Rating | Rank |
+| Handle | ✅ Solved | Current | Max | Rank |
 |:---:|:---:|:---:|:---:|:---:|
-| `Hackker_69` | **138** | 775 | 1364 | Newbie |
-| `krishnnna` | **220** | 1623 | 1623 | Expert |
-| ✨ **Combined** | **358** | — | 1623 | 🔵 Expert |
+| [`Hackker_69`](https://codeforces.com/profile/Hackker_69) | **138** | 775 | 1364 | Newbie |
+| [`krishnnna`](https://codeforces.com/profile/krishnnna) | **220** | 1623 | 1623 | Expert |
+| **Combined** | **358** | — | **1623** | 🔵 Expert |
 
 </div>
 
@@ -58,11 +59,11 @@
 
 <div align="center">
 
-| Platform | Account | ✅ Solved | 📈 Rating |
-|:---:|:---:|:---:|:---:|
-| 🟠 CodeChef | `hackker_69` | **0** | 1536 2★ |
-| 🔴 AtCoder | `krishnnna` | **0** | 650 (Max: 747) |
-| 🟢 CSES | `krishnannnna` | **0** | — |
+| Platform | Handle | ✅ Solved | 📈 Rating | 🏅 Rank |
+|:---:|:---:|:---:|:---:|:---:|
+| 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **45** | 1536 | 2★ |
+| 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **96** | 650 (Max: 747) | 🟤 Brown |
+| 🟢 [CSES](https://cses.fi/user/krishnannnna) | `krishnannnna` | **0 ⚠️** | — | — |
 
 </div>
 
