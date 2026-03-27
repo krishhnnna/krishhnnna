@@ -14,3 +14,23 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+---
+
+## 📊 GitHub & Competitive Programming Stats
+
+<div align="center">
+
+  <!-- GitHub Stats Card -->
+  <img src="https://github-readme-stats.vercel.app/api?username=krishhnnna&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&rank_icon=github" alt="GitHub Stats" height="180"/>
+
+  <!-- Top Languages Card -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=krishhnnna&layout=compact&theme=tokyonight&langs_count=8&hide_border=false" alt="Top Languages" height="180"/>
+
+</div>
+
+<div align="center">
+
+  <!-- LeetCode Stats Card -->
+  <img src="https://leetcard.jacoblin.cool/wtffff__?theme=dark&font=Nunito&ext=heatmap&site=leetcode" alt="LeetCode Stats" width="495"/>
+
+</div>
