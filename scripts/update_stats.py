@@ -283,9 +283,12 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     lc_badges = "\n  ".join([f'<a href="https://leetcode.com/{s["username"]}"><img src="https://img.shields.io/badge/LC-{s["username"]}-FFA116?style=flat&logo=leetcode&logoColor=white" alt="{s["username"]}"/></a>' for s in lc_stats])
     cf_badges = "\n  ".join([f'<a href="https://codeforces.com/profile/{s["handle"]}"><img src="https://img.shields.io/badge/CF-{s["handle"]}-1F8ACB?style=flat&logo=codeforces&logoColor=white" alt="{s["handle"]}"/></a>' for s in cf_stats])
 
+    import time
+    cache_bust = int(time.time())
+
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
-  <img src="cp_stats.svg" alt="Competitive Programming Stats" />
+  <img src="cp_stats.svg?v={cache_bust}" alt="Competitive Programming Stats" />
   <br/><br/>
   {lc_badges}
   {cf_badges}
