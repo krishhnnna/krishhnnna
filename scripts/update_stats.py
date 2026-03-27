@@ -262,9 +262,9 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
         f.write(svg)
     print(f"✅ Generated {svg_path}")
 
-    # Build clickable profile badges below the SVG
-    lc_badges = " ".join([f'[![{s["username"]}](https://img.shields.io/badge/LC-{s["username"]}-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/{s["username"]})' for s in lc_stats])
-    cf_badges = " ".join([f'[![{s["handle"]}](https://img.shields.io/badge/CF-{s["handle"]}-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/{s["handle"]})' for s in cf_stats])
+    # Build clickable profile badges below the SVG (must use HTML inside <div>)
+    lc_badges = "\n  ".join([f'<a href="https://leetcode.com/{s["username"]}"><img src="https://img.shields.io/badge/LC-{s["username"]}-FFA116?style=flat&logo=leetcode&logoColor=white" alt="{s["username"]}"/></a>' for s in lc_stats])
+    cf_badges = "\n  ".join([f'<a href="https://codeforces.com/profile/{s["handle"]}"><img src="https://img.shields.io/badge/CF-{s["handle"]}-1F8ACB?style=flat&logo=codeforces&logoColor=white" alt="{s["handle"]}"/></a>' for s in cf_stats])
 
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
@@ -272,9 +272,9 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
   <br/><br/>
   {lc_badges}
   {cf_badges}
-  [![CodeChef](https://img.shields.io/badge/CC-hackker__69-5B4638?style=flat&logo=codechef&logoColor=white)](https://www.codechef.com/users/hackker_69)
-  [![AtCoder](https://img.shields.io/badge/AC-krishnnna-222222?style=flat&logo=atcoder&logoColor=white)](https://atcoder.jp/users/krishnnna)
-  [![CSES](https://img.shields.io/badge/CSES-338950-1a1a2e?style=flat)](https://cses.fi/problemset/user/338950/)
+  <a href="https://www.codechef.com/users/hackker_69"><img src="https://img.shields.io/badge/CC-hackker__69-5B4638?style=flat&logo=codechef&logoColor=white" alt="CodeChef"/></a>
+  <a href="https://atcoder.jp/users/krishnnna"><img src="https://img.shields.io/badge/AC-krishnnna-222222?style=flat&logo=atcoder&logoColor=white" alt="AtCoder"/></a>
+  <a href="https://cses.fi/problemset/user/338950/"><img src="https://img.shields.io/badge/CSES-338950-1a1a2e?style=flat" alt="CSES"/></a>
 </div>
 <!-- COMBINED_STATS_END -->"""
 
