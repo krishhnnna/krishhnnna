@@ -12,7 +12,7 @@ ATCODER_ACCOUNT     = "krishnnna"
 # CSES requires login to scrape — update manually when solved count changes
 CSES_SOLVED         = 57
 # GFG — update manually when solved count changes
-GFG_SOLVED          = 45
+GFG_SOLVED          = 67
 GFG_USERNAME        = ""   # optional: your GeeksForGeeks username (for profile link)
 # ─────────────────────────────────────
 
