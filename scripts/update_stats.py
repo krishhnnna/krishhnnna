@@ -176,8 +176,8 @@ def atcoder_rank_label(rating):
     else:                return "⚫ Gray"
 
 
-# ──────────── MARKDOWN GENERATOR ─────
-def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
+# ──────────── SVG & MARKDOWN GENERATOR ─
+def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     now = datetime.datetime.utcnow().strftime("%b %d, %Y · %H:%M UTC")
 
     lc_total    = sum(s["total"]  for s in lc_stats)
@@ -190,29 +190,91 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
 
-    # Format platform rows
-    lc_handles = "<br>".join([f"[`{s['username']}`](https://leetcode.com/{s['username']})" for s in lc_stats])
-    cf_handles = "<br>".join([f"[`{s['handle']}`](https://codeforces.com/profile/{s['handle']})" for s in cf_stats])
-    
+    svg = f"""<svg width="495" height="290" viewBox="0 0 495 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .title {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #70a5fd; }}
+  .label {{ font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #adbac7; }}
+  .value {{ font: 700 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e3b341; }}
+  .header {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }}
+  .total-label {{ font: 700 15px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f47067; }}
+  .total-value {{ font: 800 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #57ab5a; }}
+  .icon {{ font: 400 14px 'Segoe UI Emoji', 'Apple Color Emoji', Sans-Serif; }}
+</style>
+
+<rect x="0.5" y="0.5" width="494" height="289" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+<!-- Title -->
+<text x="25" y="32" class="title">🏆 Competitive Programming Stats</text>
+<text x="25" y="48" class="header">Auto-updated · {now}</text>
+
+<!-- Column Headers -->
+<text x="28" y="78" class="header">Platform</text>
+<text x="158" y="78" class="header">Handle(s)</text>
+<text x="310" y="78" class="header">Max Rating</text>
+<text x="430" y="78" class="header">Solved</text>
+<line x1="25" y1="86" x2="470" y2="86" stroke="#21262d" stroke-width="1"/>
+
+<!-- LeetCode -->
+<text x="28" y="112" class="icon">🟡</text>
+<text x="48" y="112" class="label">LeetCode</text>
+<text x="158" y="112" class="label">{', '.join(s['username'] for s in lc_stats)}</text>
+<text x="310" y="112" class="label">1919 (Knight)</text>
+<text x="430" y="112" class="value">{lc_total}</text>
+
+<!-- Codeforces -->
+<text x="28" y="140" class="icon">🔵</text>
+<text x="48" y="140" class="label">Codeforces</text>
+<text x="158" y="140" class="label">{', '.join(s['handle'] for s in cf_stats)}</text>
+<text x="310" y="140" class="label">{best_cf} ({cf_rank_label(best_cf).split()[-1]})</text>
+<text x="430" y="140" class="value">{cf_total}</text>
+
+<!-- CodeChef -->
+<text x="28" y="168" class="icon">🟠</text>
+<text x="48" y="168" class="label">CodeChef</text>
+<text x="158" y="168" class="label">hackker_69</text>
+<text x="310" y="168" class="label">{cc_stats['rating']} ({cc_stats['stars']})</text>
+<text x="430" y="168" class="value">{cc_total}</text>
+
+<!-- AtCoder -->
+<text x="28" y="196" class="icon">🔴</text>
+<text x="48" y="196" class="label">AtCoder</text>
+<text x="158" y="196" class="label">krishnnna</text>
+<text x="310" y="196" class="label">{at_stats['max_rating']} ({atcoder_rank_label(at_stats['max_rating']).split()[-1]})</text>
+<text x="430" y="196" class="value">{at_total}</text>
+
+<!-- CSES & Others -->
+<text x="28" y="224" class="icon">🌐</text>
+<text x="48" y="224" class="label">CSES &amp; Others</text>
+<text x="158" y="224" class="label">—</text>
+<text x="310" y="224" class="label">—</text>
+<text x="430" y="224" class="value">{cses_total + gfg_total}</text>
+
+<line x1="25" y1="240" x2="470" y2="240" stroke="#21262d" stroke-width="1"/>
+
+<!-- Grand Total -->
+<text x="28" y="270" class="total-label">⚡ Grand Total</text>
+<text x="420" y="270" class="total-value">{grand_total}</text>
+
+</svg>"""
+
+    svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cp_stats.svg")
+    with open(svg_path, "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"✅ Generated {svg_path}")
+
+    # Build clickable profile badges below the SVG
+    lc_badges = " ".join([f'[![{s["username"]}](https://img.shields.io/badge/LC-{s["username"]}-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/{s["username"]})' for s in lc_stats])
+    cf_badges = " ".join([f'[![{s["handle"]}](https://img.shields.io/badge/CF-{s["handle"]}-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/{s["handle"]})' for s in cf_stats])
+
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
-
-## 🏆 Competitive Programming
-
-*Auto-updated daily &nbsp;·&nbsp; {now}*
-
-<br>
-
-| Platform | Profile(s) | 📈 Max Rating / Rank | ✅ Solved |
-|:---|:---|:---|:---:|
-| <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="20"/> **LeetCode** | {lc_handles} | 1919 <br> ⚔️ Knight | **{lc_total}** |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg" width="20"/> **Codeforces** | {cf_handles} | {best_cf} <br> {cf_rank_label(best_cf).split()[-1]} | **{cf_total}** |
-| <img src="https://cdn.codechef.com/images/cc-logo.svg" width="20"/> **CodeChef** | [`hackker_69`](https://www.codechef.com/users/hackker_69) | {cc_stats["rating"]} <br> {cc_stats["stars"]} | **{cc_total}** |
-| <img src="https://img.atcoder.jp/assets/logo.png" width="20"/> **AtCoder** | [`krishnnna`](https://atcoder.jp/users/krishnnna) | {at_stats["max_rating"]} <br> {atcoder_rank_label(at_stats["max_rating"]).split()[-1]} | **{at_total}** |
-| 🌐 **CSES & Others** | — | — | **{cses_total + gfg_total}** |
-
-**⚡ Grand Total:** `{grand_total}` problems solved
-
+  <img src="cp_stats.svg" alt="Competitive Programming Stats" />
+  <br/><br/>
+  {lc_badges}
+  {cf_badges}
+  [![CodeChef](https://img.shields.io/badge/CC-hackker__69-5B4638?style=flat&logo=codechef&logoColor=white)](https://www.codechef.com/users/hackker_69)
+  [![AtCoder](https://img.shields.io/badge/AC-krishnnna-222222?style=flat&logo=atcoder&logoColor=white)](https://atcoder.jp/users/krishnnna)
+  [![CSES](https://img.shields.io/badge/CSES-338950-1a1a2e?style=flat)](https://cses.fi/problemset/user/338950/)
 </div>
 <!-- COMBINED_STATS_END -->"""
 
@@ -265,7 +327,7 @@ if __name__ == "__main__":
     print(f"  CSES [338950]: {CSES_SOLVED} solved (hardcoded)")
     print(f"  GFG  [config]: {GFG_SOLVED} solved (hardcoded)")
 
-    markdown = generate_markdown(lc_stats, cf_stats, cc_stats, at_stats)
+    markdown = generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats)
     # The README paths might be relative, ensure we act from the root
     os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
     update_readme(markdown)

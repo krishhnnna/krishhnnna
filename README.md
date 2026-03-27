@@ -31,23 +31,13 @@
 
 <!-- COMBINED_STATS_START -->
 <div align="center">
-
-## 🏆 Competitive Programming
-
-*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 22:37 UTC*
-
-<br>
-
-| Platform | Profile(s) | 📈 Max Rating / Rank | ✅ Solved |
-|:---|:---|:---|:---:|
-| <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="20"/> **LeetCode** | [`wtffff__`](https://leetcode.com/wtffff__)<br>[`Hackker_69`](https://leetcode.com/Hackker_69) | 1919 <br> ⚔️ Knight | **417** |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg" width="20"/> **Codeforces** | [`Hackker_69`](https://codeforces.com/profile/Hackker_69)<br>[`krishnnna`](https://codeforces.com/profile/krishnnna) | 1623 <br> Expert | **358** |
-| <img src="https://cdn.codechef.com/images/cc-logo.svg" width="20"/> **CodeChef** | [`hackker_69`](https://www.codechef.com/users/hackker_69) | 1536 <br> 2★ | **45** |
-| <img src="https://img.atcoder.jp/assets/logo.png" width="20"/> **AtCoder** | [`krishnnna`](https://atcoder.jp/users/krishnnna) | 747 <br> Brown | **96** |
-| 🌐 **CSES & Others** | — | — | **102** |
-
-**⚡ Grand Total:** `1018` problems solved
-
+  <img src="cp_stats.svg" alt="Competitive Programming Stats" />
+  <br/><br/>
+  [![wtffff__](https://img.shields.io/badge/LC-wtffff__-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/wtffff__) [![Hackker_69](https://img.shields.io/badge/LC-Hackker_69-FFA116?style=flat&logo=leetcode&logoColor=white)](https://leetcode.com/Hackker_69)
+  [![Hackker_69](https://img.shields.io/badge/CF-Hackker_69-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Hackker_69) [![krishnnna](https://img.shields.io/badge/CF-krishnnna-1F8ACB?style=flat&logo=codeforces&logoColor=white)](https://codeforces.com/profile/krishnnna)
+  [![CodeChef](https://img.shields.io/badge/CC-hackker__69-5B4638?style=flat&logo=codechef&logoColor=white)](https://www.codechef.com/users/hackker_69)
+  [![AtCoder](https://img.shields.io/badge/AC-krishnnna-222222?style=flat&logo=atcoder&logoColor=white)](https://atcoder.jp/users/krishnnna)
+  [![CSES](https://img.shields.io/badge/CSES-338950-1a1a2e?style=flat)](https://cses.fi/problemset/user/338950/)
 </div>
 <!-- COMBINED_STATS_END -->
 
