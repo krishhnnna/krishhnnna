@@ -9,7 +9,11 @@ LEETCODE_ACCOUNTS   = ["wtffff__", "Hackker_69"]
 CODEFORCES_ACCOUNTS = ["Hackker_69", "krishnnna"]
 CODECHEF_ACCOUNT    = "hackker_69"
 ATCODER_ACCOUNT     = "krishnnna"
-CSES_ID        = "338950"         # numeric profile ID from cses.fi/user/338950
+# CSES requires login to scrape — update manually when solved count changes
+CSES_SOLVED         = 57
+# GFG — update manually when solved count changes
+GFG_SOLVED          = 45
+GFG_USERNAME        = ""   # optional: your GeeksForGeeks username (for profile link)
 # ─────────────────────────────────────
 
 HEADERS = {
@@ -142,30 +146,10 @@ def get_atcoder_stats(username):
                 "max_rating": 0, "contests": 0, "solved": 0}
 
 
-# ──────────── CSES ───────────────────
-def get_cses_stats(user_id):
-    if not user_id:
-        return {"user_id": "", "solved": 0}
-    try:
-        resp = requests.get(
-            f"https://cses.fi/user/{user_id}",
-            headers=HEADERS, timeout=10
-        )
-        if resp.status_code == 404:
-            print(f"[CSES] Profile not found for ID '{user_id}'.")
-            return {"user_id": user_id, "solved": 0, "not_found": True}
-
-        soup = BeautifulSoup(resp.text, "html.parser")
-        solved = 0
-        text = soup.get_text()
-        # Matches patterns like "200 / 300 tasks"
-        matches = re.findall(r"(\d+)\s*/\s*\d+\s*tasks?", text, re.IGNORECASE)
-        if matches:
-            solved = sum(int(x) for x in matches)
-        return {"user_id": user_id, "solved": solved, "not_found": False}
-    except Exception as e:
-        print(f"[CSES] Error for {user_id}: {e}")
-        return {"user_id": user_id, "solved": 0, "not_found": False}
+# ──────────── CSES & GFG ─────────────
+# CSES requires login to view stats — values are read from config constants above.
+# To update: change CSES_SOLVED / GFG_SOLVED at the top of this file, commit,
+# and the GitHub Action will write them into the README automatically.
 
 
 # ──────────── HELPERS ────────────────
@@ -193,7 +177,7 @@ def atcoder_rank_label(rating):
 
 
 # ──────────── MARKDOWN GENERATOR ─────
-def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
+def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     now = datetime.datetime.utcnow().strftime("%b %d, %Y · %H:%M UTC")
 
     lc_total    = sum(s["total"]  for s in lc_stats)
@@ -203,15 +187,12 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
     cf_total    = sum(s["solved"] for s in cf_stats)
     cc_total    = cc_stats["solved"]
     at_total    = at_stats["solved"]
-    cses_total  = cses_stats["solved"]
-    grand_total = lc_total + cf_total + cc_total + at_total + cses_total
+    cses_total  = CSES_SOLVED
+    gfg_total   = GFG_SOLVED
+    grand_total = lc_total + cf_total + cc_total + at_total + cses_total + gfg_total
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
     best_cf_h   = max(cf_stats, key=lambda s: s["max_rating"])
-
-    cses_note = ""
-    if cses_stats.get("not_found"):
-        cses_note = " ⚠️"
 
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
@@ -224,15 +205,15 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
 
 ---
 
-### ⚡ Total: `{grand_total}` problems solved across 5 platforms
+### ⚡ Total: `{grand_total}` problems solved across 6 platforms
 
 <div align="center">
 
-| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| **Solved** | **{lc_total}** | **{cf_total}** | **{cc_total}** | **{at_total}** | **{cses_total}{cses_note}** |
-| **Best Rating** | 1919 | {best_cf} | {cc_stats["rating"]} | {at_stats["max_rating"]} | — |
-| **Rank/Title** | ⚔️ Knight | {cf_rank_label(best_cf)} | {cc_stats["stars"]} | {atcoder_rank_label(at_stats["max_rating"])} | — |
+| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES | 🟤 GFG |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Solved** | **{lc_total}** | **{cf_total}** | **{cc_total}** | **{at_total}** | **{cses_total}** | **{gfg_total}** |
+| **Best Rating** | 1919 | {best_cf} | {cc_stats["rating"]} | {at_stats["max_rating"]} | — | — |
+| **Rank/Title** | ⚔️ Knight | {cf_rank_label(best_cf)} | {cc_stats["stars"]} | {atcoder_rank_label(at_stats["max_rating"])} | — | — |
 
 </div>
 
@@ -274,7 +255,7 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
 
 ---
 
-### 🟠 CodeChef &nbsp;·&nbsp; 🔴 AtCoder &nbsp;·&nbsp; 🟢 CSES
+### 🟠 CodeChef &nbsp;·&nbsp; 🔴 AtCoder &nbsp;·&nbsp; 🟢 CSES &nbsp;·&nbsp; 🟤 GFG
 
 <div align="center">
 
@@ -282,7 +263,8 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
 |:---:|:---:|:---:|:---:|:---:|
 | 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **{cc_total}** | {cc_stats["rating"]} | {cc_stats["stars"]} |
 | 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **{at_total}** | {at_stats["rating"]} (Max: {at_stats["max_rating"]}) | {atcoder_rank_label(at_stats["max_rating"])} |
-| 🟢 [CSES](https://cses.fi/user/{CSES_ID}) | `{CSES_ID}` | **{cses_total}{cses_note}** | — | — |
+| 🟢 [CSES](https://cses.fi/problemset/user/338950/) | `338950` | **{cses_total}** | — | — |
+| 🟤 [GeeksForGeeks](https://www.geeksforgeeks.org/user/{GFG_USERNAME}/) | `{GFG_USERNAME or "krishhnnna"}` | **{gfg_total}** | — | — |
 
 </div>
 
@@ -327,9 +309,6 @@ if __name__ == "__main__":
     print("🔄 Fetching AtCoder stats...")
     at_stats = get_atcoder_stats(ATCODER_ACCOUNT)
 
-    print("🔄 Fetching CSES stats...")
-    cses_stats = get_cses_stats(CSES_ID)
-
     print("\n📊 Summary:")
     for s in lc_stats:
         print(f"  LC  [{s['username']}]: {s['total']} solved")
@@ -337,7 +316,8 @@ if __name__ == "__main__":
         print(f"  CF  [{s['handle']}]:  {s['solved']} solved, rating {s['rating']}")
     print(f"  CC  [{cc_stats['username']}]:   {cc_stats['solved']} solved, {cc_stats['rating']}")
     print(f"  AT  [{at_stats['username']}]:  {at_stats['solved']} solved, {at_stats['rating']}")
-    print(f"  CSES [{cses_stats.get('user_id','')}]: {cses_stats['solved']} solved")
+    print(f"  CSES [338950]: {CSES_SOLVED} solved (hardcoded)")
+    print(f"  GFG  [config]: {GFG_SOLVED} solved (hardcoded)")
 
-    markdown = generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats)
+    markdown = generate_markdown(lc_stats, cf_stats, cc_stats, at_stats)
     update_readme(markdown)

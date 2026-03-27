@@ -69,21 +69,21 @@
 
 ## 🏆 Competitive Programming
 
-*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 21:49 UTC*
+*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 22:06 UTC*
 
 </div>
 
 ---
 
-### ⚡ Total: `916` problems solved across 5 platforms
+### ⚡ Total: `1018` problems solved across 6 platforms
 
 <div align="center">
 
-| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| **Solved** | **417** | **358** | **45** | **96** | **0** |
-| **Best Rating** | 1919 | 1623 | 1536 | 747 | — |
-| **Rank/Title** | ⚔️ Knight | 🔵 Expert | 2★ | 🟤 Brown | — |
+| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES | 🟤 GFG |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Solved** | **417** | **358** | **45** | **96** | **57** | **45** |
+| **Best Rating** | 1919 | 1623 | 1536 | 747 | — | — |
+| **Rank/Title** | ⚔️ Knight | 🔵 Expert | 2★ | 🟤 Brown | — | — |
 
 </div>
 
@@ -117,7 +117,7 @@
 
 ---
 
-### 🟠 CodeChef &nbsp;·&nbsp; 🔴 AtCoder &nbsp;·&nbsp; 🟢 CSES
+### 🟠 CodeChef &nbsp;·&nbsp; 🔴 AtCoder &nbsp;·&nbsp; 🟢 CSES &nbsp;·&nbsp; 🟤 GFG
 
 <div align="center">
 
@@ -125,7 +125,8 @@
 |:---:|:---:|:---:|:---:|:---:|
 | 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **45** | 1536 | 2★ |
 | 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **96** | 650 (Max: 747) | 🟤 Brown |
-| 🟢 [CSES](https://cses.fi/user/338950) | `338950` | **0** | — | — |
+| 🟢 [CSES](https://cses.fi/problemset/user/338950/) | `338950` | **57** | — | — |
+| 🟤 [GeeksForGeeks](https://www.geeksforgeeks.org/user//) | `krishhnnna` | **45** | — | — |
 
 </div>
 
