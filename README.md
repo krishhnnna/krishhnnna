@@ -1,15 +1,73 @@
-## Hi there 👋
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=6E56CF&center=true&vCenter=true&width=500&lines=Hey+there!+I'm+Krishna+%F0%9F%91%8B;Competitive+Programmer+%F0%9F%8F%86;Full+Stack+Developer+%F0%9F%92%BB;Open+Source+Enthusiast+%F0%9F%9A%80" alt="Typing SVG" />
+</div>
+
+<p align="center">
+  <a href="https://github.com/krishhnnna">
+    <img src="https://img.shields.io/github/followers/krishhnnna?label=Follow&style=social" alt="GitHub Followers" />
+  </a>
+  &nbsp;
+  <a href="https://linkedin.com/in/YOUR_LINKEDIN_HERE">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="mailto:YOUR_EMAIL_HERE">
+    <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p>
+
+---
+
+### 👨‍💻 About Me
+
+- 🔭 Currently building **CodePulse** — a unified CP dashboard across all platforms
+- 🌱 Levelling up in **System Design & Advanced Algorithms**
+- ⚔️ **LeetCode Knight** (1919 max) · **Codeforces Expert** (1623) · **916+ problems** solved
+- 👯 Open to collaborate on **Open Source & Hackathons**
+- 💬 Ask me about **React, Python, FastAPI, Competitive Programming**
+- ⚡ Fun fact: I have **2 LeetCode accounts** because one wasn't enough
+
+---
+
+### 🛠️ Tech Stack
+
+| **Frontend** | **Backend** | **Tools & Cloud** |
+| :---: | :---: | :---: |
+| <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> | <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> | <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" /> |
+| <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /> | <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> | <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" /> |
+| <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" /> | <img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white" /> | <img src="https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white" /> |
+| <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" /> | <img src="https://img.shields.io/badge/Express.js-404D59?style=flat-square&logo=express&logoColor=white" /> | <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white" /> |
+
+---
+
+### 🚀 Featured Projects
+
+| **Project** | **Description** | **Tech Stack** | **Link** |
+| :--- | :--- | :--- | :---: |
+| **⌨️ Code-Collaborate** | Real-time collaborative code editor with live sync across users | ![React](https://img.shields.io/badge/-React-black?style=flat-square) ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square) ![Socket.io](https://img.shields.io/badge/-Socket.io-black?style=flat-square) | [🔗 Live](https://code-collaborate-one.vercel.app) |
+| **📊 CodePulse** | Unified dashboard aggregating stats from LeetCode, Codeforces & more | ![React](https://img.shields.io/badge/-React-black?style=flat-square) ![FastAPI](https://img.shields.io/badge/-FastAPI-black?style=flat-square) ![Python](https://img.shields.io/badge/-Python-black?style=flat-square) | [🔗 Live](https://codepulse-two.vercel.app) |
+| **🆘 Women's Safety App** | Emergency response platform with real-time alerts & safety features | ![React](https://img.shields.io/badge/-React-black?style=flat-square) ![Node.js](https://img.shields.io/badge/-Node.js-black?style=flat-square) ![MongoDB](https://img.shields.io/badge/-MongoDB-black?style=flat-square) | [🔗 Live](https://woman-safety-app-alpha.vercel.app) |
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=krishhnnna&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+
+![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=krishhnnna&theme=tokyonight&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=krishhnnna&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
+
+</div>
 
 ---
 
 <!-- COMBINED_STATS_START -->
-<div align="center">
-
 ## 🏆 Competitive Programming
 
 *Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 21:27 UTC*
-
-</div>
 
 ---
 
@@ -68,3 +126,11 @@
 </div>
 
 <!-- COMBINED_STATS_END -->
+
+---
+
+<div align="center">
+
+[![](https://visitcount.itsvg.in/api?id=krishhnnna&icon=6&color=6)](https://visitcount.itsvg.in)
+
+</div>
