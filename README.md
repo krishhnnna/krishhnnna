@@ -29,6 +29,14 @@
 
 ---
 
+<!-- COMBINED_STATS_START -->
+<div align="center">
+  <img src="cp_stats.svg?t=1774630860" alt="Combined Competitive Programming Stats" />
+</div>
+<!-- COMBINED_STATS_END -->
+
+---
+
 ### 🛠️ Tech Stack
 
 | **Frontend** | **Backend** | **Tools & Cloud** |
@@ -61,14 +69,6 @@
 ![Top Languages](https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=krishhnnna&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
 
 </div>
-
----
-
-<!-- COMBINED_STATS_START -->
-<div align="center">
-  <img src="cp_stats.svg?t=1774630528" alt="Combined Competitive Programming Stats" />
-</div>
-<!-- COMBINED_STATS_END -->
 
 ---
 

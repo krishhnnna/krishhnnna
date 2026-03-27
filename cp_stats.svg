@@ -39,12 +39,12 @@
     <!-- AtCoder -->
     <text x="30" y="200" class="label">🔴 AtCoder</text>
     <a href="https://atcoder.jp/users/krishnnna" target="_blank"><text x="150" y="200" class="label">krishnnna</text></a>
-    <text x="360" y="200" class="label">650 (Brown)</text>
+    <text x="360" y="200" class="label">747 (Brown)</text>
     <text x="490" y="200" class="value">96</text>
 
     <!-- CSES & Others -->
-    <text x="30" y="230" class="label">🌐 CSES &amp; GFG</text>
-    <a href="https://cses.fi/problemset/user/338950/" target="_blank"><text x="150" y="230" class="label">338950, krishhnnna</text></a>
+    <text x="30" y="230" class="label">🌐 CSES &amp; Others</text>
+    <text x="150" y="230" class="label">—</text>
     <text x="360" y="230" class="label">—</text>
     <text x="490" y="230" class="value">102</text>
 

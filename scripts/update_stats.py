@@ -233,12 +233,12 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     <!-- AtCoder -->
     <text x="30" y="200" class="label">🔴 AtCoder</text>
     <a href="https://atcoder.jp/users/krishnnna" target="_blank"><text x="150" y="200" class="label">krishnnna</text></a>
-    <text x="360" y="200" class="label">{at_stats["rating"]} ({atcoder_rank_label(at_stats["max_rating"]).split()[-1]})</text>
+    <text x="360" y="200" class="label">{at_stats["max_rating"]} ({atcoder_rank_label(at_stats["max_rating"]).split()[-1]})</text>
     <text x="490" y="200" class="value">{at_total}</text>
 
     <!-- CSES & Others -->
-    <text x="30" y="230" class="label">🌐 CSES &amp; GFG</text>
-    <a href="https://cses.fi/problemset/user/338950/" target="_blank"><text x="150" y="230" class="label">338950, {gfg_user}</text></a>
+    <text x="30" y="230" class="label">🌐 CSES &amp; Others</text>
+    <text x="150" y="230" class="label">—</text>
     <text x="360" y="230" class="label">—</text>
     <text x="490" y="230" class="value">{cses_total + gfg_total}</text>
 
