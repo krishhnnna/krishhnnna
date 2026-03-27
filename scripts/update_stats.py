@@ -192,7 +192,12 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     grand_total = lc_total + cf_total + cc_total + at_total + cses_total + gfg_total
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
-    best_cf_h   = max(cf_stats, key=lambda s: s["max_rating"])
+
+    # Format platform rows
+    lc_handles = "<br>".join([f"[`{s['username']}`](https://leetcode.com/{s['username']})" for s in lc_stats])
+    cf_handles = "<br>".join([f"[`{s['handle']}`](https://codeforces.com/profile/{s['handle']})" for s in cf_stats])
+    
+    gfg_user = GFG_USERNAME if GFG_USERNAME else "krishhnnna"
 
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
@@ -201,73 +206,19 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
 
 *Auto-updated daily &nbsp;·&nbsp; {now}*
 
-</div>
+<br>
 
----
+| Platform | Profile(s) | 📈 Max Rating / Rank | ✅ Solved |
+|:---|:---|:---|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="20"/> **LeetCode** | {lc_handles} | 1919 <br> ⚔️ Knight | **{lc_total}** |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg" width="20"/> **Codeforces** | {cf_handles} | {best_cf} <br> {cf_rank_label(best_cf)} | **{cf_total}** |
+| <img src="https://cdn.codechef.com/images/cc-logo.svg" width="20"/> **CodeChef** | [`hackker_69`](https://www.codechef.com/users/hackker_69) | {cc_stats["rating"]} <br> {cc_stats["stars"]} | **{cc_total}** |
+| <img src="https://img.atcoder.jp/assets/logo.png" width="20"/> **AtCoder** | [`krishnnna`](https://atcoder.jp/users/krishnnna) | {at_stats["max_rating"]} <br> {atcoder_rank_label(at_stats["max_rating"])} | **{at_total}** |
+| 🌐 **CSES & Others** | [`338950`](https://cses.fi/problemset/user/338950/) (CSES)<br>[`{gfg_user}`](https://www.geeksforgeeks.org/user/{gfg_user}/) (GFG) | — | **{cses_total + gfg_total}** |
 
-### ⚡ Total: `{grand_total}` problems solved across 6 platforms
-
-<div align="center">
-
-| | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES | 🟤 GFG |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Solved** | **{lc_total}** | **{cf_total}** | **{cc_total}** | **{at_total}** | **{cses_total}** | **{gfg_total}** |
-| **Best Rating** | 1919 | {best_cf} | {cc_stats["rating"]} | {at_stats["max_rating"]} | — | — |
-| **Rank/Title** | ⚔️ Knight | {cf_rank_label(best_cf)} | {cc_stats["stars"]} | {atcoder_rank_label(at_stats["max_rating"])} | — | — |
+**⚡ Grand Total:** `{grand_total}` problems solved
 
 </div>
-
----
-
-### 🟡 LeetCode
-
-<div align="center">
-
-| Account | Total | 🟢 Easy | 🟡 Medium | 🔴 Hard |
-|:---:|:---:|:---:|:---:|:---:|"""
-
-    for s in lc_stats:
-        md += f"\n| [`{s['username']}`](https://leetcode.com/{s['username']}) | **{s['total']}** | {s['easy']} | {s['medium']} | {s['hard']} |"
-
-    md += f"\n| **Combined** | **{lc_total}** | {lc_easy} | {lc_medium} | {lc_hard} |"
-
-    md += f"""
-
-</div>
-
----
-
-### 🔵 Codeforces
-
-<div align="center">
-
-| Handle | ✅ Solved | Current | Max | Rank |
-|:---:|:---:|:---:|:---:|:---:|"""
-
-    for s in cf_stats:
-        md += f"\n| [`{s['handle']}`](https://codeforces.com/profile/{s['handle']}) | **{s['solved']}** | {s['rating']} | {s['max_rating']} | {s['rank']} |"
-
-    md += f"\n| **Combined** | **{cf_total}** | — | **{best_cf}** | {cf_rank_label(best_cf)} |"
-
-    md += f"""
-
-</div>
-
----
-
-### 🟠 CodeChef &nbsp;·&nbsp; 🔴 AtCoder &nbsp;·&nbsp; 🟢 CSES &nbsp;·&nbsp; 🟤 GFG
-
-<div align="center">
-
-| Platform | Handle | ✅ Solved | 📈 Rating | 🏅 Rank |
-|:---:|:---:|:---:|:---:|:---:|
-| 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **{cc_total}** | {cc_stats["rating"]} | {cc_stats["stars"]} |
-| 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **{at_total}** | {at_stats["rating"]} (Max: {at_stats["max_rating"]}) | {atcoder_rank_label(at_stats["max_rating"])} |
-| 🟢 [CSES](https://cses.fi/problemset/user/338950/) | `338950` | **{cses_total}** | — | — |
-| 🟤 [GeeksForGeeks](https://www.geeksforgeeks.org/user/{GFG_USERNAME}/) | `{GFG_USERNAME or "krishhnnna"}` | **{gfg_total}** | — | — |
-
-</div>
-
 <!-- COMBINED_STATS_END -->"""
 
     return md
