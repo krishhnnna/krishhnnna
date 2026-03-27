@@ -176,8 +176,8 @@ def atcoder_rank_label(rating):
     else:                return "⚫ Gray"
 
 
-# ──────────── SVG & MARKDOWN GENERATOR ─
-def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
+# ──────────── MARKDOWN GENERATOR ─────
+def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     now = datetime.datetime.utcnow().strftime("%b %d, %Y · %H:%M UTC")
 
     lc_total    = sum(s["total"]  for s in lc_stats)
@@ -190,78 +190,29 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
 
-    gfg_user = GFG_USERNAME if GFG_USERNAME else "krishhnnna"
-
-    svg = f"""<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>
-        .title {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }}
-        .label {{ font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c0caf5; }}
-        .value {{ font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9ece6a; }}
-        .header {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #bb9af7; }}
-        a {{ cursor: pointer; }}
-        a:hover .label {{ text-decoration: underline; }}
-    </style>
-    
-    <rect x="0.5" y="0.5" width="599" height="299" rx="8" fill="#1a1b27" stroke="#383e59" stroke-width="1"/>
-    
-    <text x="25" y="35" class="title">🏆 Combined Competitive Programming</text>
-
-    <text x="30" y="70" class="header">Platform</text>
-    <text x="150" y="70" class="header">Profiles</text>
-    <text x="360" y="70" class="header">Rating (Max)</text>
-    <text x="490" y="70" class="header">Solved</text>
-    <line x1="25" y1="80" x2="575" y2="80" stroke="#383e59" stroke-width="1"/>
-
-    <!-- LeetCode -->
-    <text x="30" y="110" class="label">🟡 LeetCode</text>
-    <a href="https://leetcode.com/wtffff__" target="_blank"><text x="150" y="110" class="label">wtffff__, Hackker_69</text></a>
-    <text x="360" y="110" class="label">1919 (Knight)</text>
-    <text x="490" y="110" class="value">{lc_total}</text>
-
-    <!-- Codeforces -->
-    <text x="30" y="140" class="label">🔵 Codeforces</text>
-    <a href="https://codeforces.com/profile/krishnnna" target="_blank"><text x="150" y="140" class="label">Hackker_69, krishnnna</text></a>
-    <text x="360" y="140" class="label">{best_cf} ({cf_rank_label(best_cf).split()[-1]})</text>
-    <text x="490" y="140" class="value">{cf_total}</text>
-
-    <!-- CodeChef -->
-    <text x="30" y="170" class="label">🟠 CodeChef</text>
-    <a href="https://www.codechef.com/users/hackker_69" target="_blank"><text x="150" y="170" class="label">hackker_69</text></a>
-    <text x="360" y="170" class="label">{cc_stats["rating"]} ({cc_stats["stars"]})</text>
-    <text x="490" y="170" class="value">{cc_total}</text>
-
-    <!-- AtCoder -->
-    <text x="30" y="200" class="label">🔴 AtCoder</text>
-    <a href="https://atcoder.jp/users/krishnnna" target="_blank"><text x="150" y="200" class="label">krishnnna</text></a>
-    <text x="360" y="200" class="label">{at_stats["max_rating"]} ({atcoder_rank_label(at_stats["max_rating"]).split()[-1]})</text>
-    <text x="490" y="200" class="value">{at_total}</text>
-
-    <!-- CSES & Others -->
-    <text x="30" y="230" class="label">🌐 CSES &amp; Others</text>
-    <text x="150" y="230" class="label">—</text>
-    <text x="360" y="230" class="label">—</text>
-    <text x="490" y="230" class="value">{cses_total + gfg_total}</text>
-
-    <line x1="25" y1="245" x2="575" y2="245" stroke="#383e59" stroke-width="1"/>
-
-    <!-- Grand Total -->
-    <text x="30" y="275" class="title" fill="#f7768e">⚡ Grand Total</text>
-    <text x="490" y="275" class="value" style="font-size: 16px;">{grand_total}</text>
-
-</svg>"""
-
-    import os
-    svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cp_stats.svg")
-    with open(svg_path, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print(f"✅ Generated {svg_path}")
-
-    # Use a cache-busting timestamp param to ensure GitHub updates the SVG image when refreshed
-    timestamp = datetime.datetime.utcnow().strftime('%s')
+    # Format platform rows
+    lc_handles = "<br>".join([f"[`{s['username']}`](https://leetcode.com/{s['username']})" for s in lc_stats])
+    cf_handles = "<br>".join([f"[`{s['handle']}`](https://codeforces.com/profile/{s['handle']})" for s in cf_stats])
     
     md = f"""<!-- COMBINED_STATS_START -->
 <div align="center">
-  <img src="cp_stats.svg?t={timestamp}" alt="Combined Competitive Programming Stats" />
+
+## 🏆 Competitive Programming
+
+*Auto-updated daily &nbsp;·&nbsp; {now}*
+
+<br>
+
+| Platform | Profile(s) | 📈 Max Rating / Rank | ✅ Solved |
+|:---|:---|:---|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="20"/> **LeetCode** | {lc_handles} | 1919 <br> ⚔️ Knight | **{lc_total}** |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg" width="20"/> **Codeforces** | {cf_handles} | {best_cf} <br> {cf_rank_label(best_cf).split()[-1]} | **{cf_total}** |
+| <img src="https://cdn.codechef.com/images/cc-logo.svg" width="20"/> **CodeChef** | [`hackker_69`](https://www.codechef.com/users/hackker_69) | {cc_stats["rating"]} <br> {cc_stats["stars"]} | **{cc_total}** |
+| <img src="https://img.atcoder.jp/assets/logo.png" width="20"/> **AtCoder** | [`krishnnna`](https://atcoder.jp/users/krishnnna) | {at_stats["max_rating"]} <br> {atcoder_rank_label(at_stats["max_rating"]).split()[-1]} | **{at_total}** |
+| 🌐 **CSES & Others** | — | — | **{cses_total + gfg_total}** |
+
+**⚡ Grand Total:** `{grand_total}` problems solved
+
 </div>
 <!-- COMBINED_STATS_END -->"""
 
@@ -314,7 +265,7 @@ if __name__ == "__main__":
     print(f"  CSES [338950]: {CSES_SOLVED} solved (hardcoded)")
     print(f"  GFG  [config]: {GFG_SOLVED} solved (hardcoded)")
 
-    markdown = generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats)
+    markdown = generate_markdown(lc_stats, cf_stats, cc_stats, at_stats)
     # The README paths might be relative, ensure we act from the root
     os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
     update_readme(markdown)

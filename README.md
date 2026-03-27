@@ -22,7 +22,7 @@
 
 - 🔭 Currently building **CodePulse** — a unified CP dashboard across all platforms
 - 🌱 Levelling up in **System Design & Advanced Algorithms**
-- ⚔️ **LeetCode Knight** (1919 max) · **Codeforces Expert** (1623) · **916+ problems** solved
+- ⚔️ **LeetCode Knight** (1919 max) · **1000+ problems** solved
 - 👯 Open to collaborate on **Open Source & Hackathons**
 - 💬 Ask me about **React, Python, FastAPI, Competitive Programming**
 - ⚡ Fun fact: I have **2 LeetCode accounts** because one wasn't enough
@@ -31,7 +31,23 @@
 
 <!-- COMBINED_STATS_START -->
 <div align="center">
-  <img src="cp_stats.svg?t=1774630860" alt="Combined Competitive Programming Stats" />
+
+## 🏆 Competitive Programming
+
+*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 22:37 UTC*
+
+<br>
+
+| Platform | Profile(s) | 📈 Max Rating / Rank | ✅ Solved |
+|:---|:---|:---|:---:|
+| <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" width="20"/> **LeetCode** | [`wtffff__`](https://leetcode.com/wtffff__)<br>[`Hackker_69`](https://leetcode.com/Hackker_69) | 1919 <br> ⚔️ Knight | **417** |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Codeforces_logo.svg" width="20"/> **Codeforces** | [`Hackker_69`](https://codeforces.com/profile/Hackker_69)<br>[`krishnnna`](https://codeforces.com/profile/krishnnna) | 1623 <br> Expert | **358** |
+| <img src="https://cdn.codechef.com/images/cc-logo.svg" width="20"/> **CodeChef** | [`hackker_69`](https://www.codechef.com/users/hackker_69) | 1536 <br> 2★ | **45** |
+| <img src="https://img.atcoder.jp/assets/logo.png" width="20"/> **AtCoder** | [`krishnnna`](https://atcoder.jp/users/krishnnna) | 747 <br> Brown | **96** |
+| 🌐 **CSES & Others** | — | — | **102** |
+
+**⚡ Grand Total:** `1018` problems solved
+
 </div>
 <!-- COMBINED_STATS_END -->
 
