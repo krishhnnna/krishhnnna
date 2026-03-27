@@ -7,11 +7,11 @@
     <img src="https://img.shields.io/github/followers/krishhnnna?label=Follow&style=social" alt="GitHub Followers" />
   </a>
   &nbsp;
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN_HERE">
+  <a href="https://www.linkedin.com/in/krishna-mishra-a759b3384/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="mailto:YOUR_EMAIL_HERE">
+  <a href="mailto:krishnnna2006@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
@@ -65,9 +65,13 @@
 ---
 
 <!-- COMBINED_STATS_START -->
+<div align="center">
+
 ## 🏆 Competitive Programming
 
-*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 21:27 UTC*
+*Auto-updated daily &nbsp;·&nbsp; Mar 27, 2026 · 21:49 UTC*
+
+</div>
 
 ---
 
@@ -77,7 +81,7 @@
 
 | | 🟡 LeetCode | 🔵 Codeforces | 🟠 CodeChef | 🔴 AtCoder | 🟢 CSES |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| **Solved** | **417** | **358** | **45** | **96** | **0 ⚠️** |
+| **Solved** | **417** | **358** | **45** | **96** | **0** |
 | **Best Rating** | 1919 | 1623 | 1536 | 747 | — |
 | **Rank/Title** | ⚔️ Knight | 🔵 Expert | 2★ | 🟤 Brown | — |
 
@@ -121,7 +125,7 @@
 |:---:|:---:|:---:|:---:|:---:|
 | 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **45** | 1536 | 2★ |
 | 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **96** | 650 (Max: 747) | 🟤 Brown |
-| 🟢 [CSES](https://cses.fi/user/krishnannnna) | `krishnannnna` | **0 ⚠️** | — | — |
+| 🟢 [CSES](https://cses.fi/user/338950) | `338950` | **0** | — | — |
 
 </div>
 

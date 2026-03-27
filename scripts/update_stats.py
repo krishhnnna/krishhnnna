@@ -9,7 +9,7 @@ LEETCODE_ACCOUNTS   = ["wtffff__", "Hackker_69"]
 CODEFORCES_ACCOUNTS = ["Hackker_69", "krishnnna"]
 CODECHEF_ACCOUNT    = "hackker_69"
 ATCODER_ACCOUNT     = "krishnnna"
-CSES_ACCOUNT        = "krishnannnna"   # set to "" to disable
+CSES_ID        = "338950"         # numeric profile ID from cses.fi/user/338950
 # ─────────────────────────────────────
 
 HEADERS = {
@@ -143,17 +143,17 @@ def get_atcoder_stats(username):
 
 
 # ──────────── CSES ───────────────────
-def get_cses_stats(username):
-    if not username:
-        return {"username": "", "solved": 0}
+def get_cses_stats(user_id):
+    if not user_id:
+        return {"user_id": "", "solved": 0}
     try:
         resp = requests.get(
-            f"https://cses.fi/user/{username}",
+            f"https://cses.fi/user/{user_id}",
             headers=HEADERS, timeout=10
         )
         if resp.status_code == 404:
-            print(f"[CSES] Profile not found for '{username}'. Make sure the username is correct.")
-            return {"username": username, "solved": 0, "not_found": True}
+            print(f"[CSES] Profile not found for ID '{user_id}'.")
+            return {"user_id": user_id, "solved": 0, "not_found": True}
 
         soup = BeautifulSoup(resp.text, "html.parser")
         solved = 0
@@ -162,10 +162,10 @@ def get_cses_stats(username):
         matches = re.findall(r"(\d+)\s*/\s*\d+\s*tasks?", text, re.IGNORECASE)
         if matches:
             solved = sum(int(x) for x in matches)
-        return {"username": username, "solved": solved, "not_found": False}
+        return {"user_id": user_id, "solved": solved, "not_found": False}
     except Exception as e:
-        print(f"[CSES] Error for {username}: {e}")
-        return {"username": username, "solved": 0, "not_found": False}
+        print(f"[CSES] Error for {user_id}: {e}")
+        return {"user_id": user_id, "solved": 0, "not_found": False}
 
 
 # ──────────── HELPERS ────────────────
@@ -282,7 +282,7 @@ def generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats):
 |:---:|:---:|:---:|:---:|:---:|
 | 🟠 [CodeChef](https://www.codechef.com/users/hackker_69) | `hackker_69` | **{cc_total}** | {cc_stats["rating"]} | {cc_stats["stars"]} |
 | 🔴 [AtCoder](https://atcoder.jp/users/krishnnna) | `krishnnna` | **{at_total}** | {at_stats["rating"]} (Max: {at_stats["max_rating"]}) | {atcoder_rank_label(at_stats["max_rating"])} |
-| 🟢 [CSES](https://cses.fi/user/{CSES_ACCOUNT}) | `{CSES_ACCOUNT}` | **{cses_total}{cses_note}** | — | — |
+| 🟢 [CSES](https://cses.fi/user/{CSES_ID}) | `{CSES_ID}` | **{cses_total}{cses_note}** | — | — |
 
 </div>
 
@@ -328,7 +328,7 @@ if __name__ == "__main__":
     at_stats = get_atcoder_stats(ATCODER_ACCOUNT)
 
     print("🔄 Fetching CSES stats...")
-    cses_stats = get_cses_stats(CSES_ACCOUNT)
+    cses_stats = get_cses_stats(CSES_ID)
 
     print("\n📊 Summary:")
     for s in lc_stats:
@@ -337,7 +337,7 @@ if __name__ == "__main__":
         print(f"  CF  [{s['handle']}]:  {s['solved']} solved, rating {s['rating']}")
     print(f"  CC  [{cc_stats['username']}]:   {cc_stats['solved']} solved, {cc_stats['rating']}")
     print(f"  AT  [{at_stats['username']}]:  {at_stats['solved']} solved, {at_stats['rating']}")
-    print(f"  CSES[{cses_stats['username']}]: {cses_stats['solved']} solved")
+    print(f"  CSES [{cses_stats.get('user_id','')}]: {cses_stats['solved']} solved")
 
     markdown = generate_markdown(lc_stats, cf_stats, cc_stats, at_stats, cses_stats)
     update_readme(markdown)
