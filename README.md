@@ -54,11 +54,11 @@
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=krishhnnna&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+![GitHub Stats](https://github-readme-stats-salesp07.vercel.app/api?username=krishhnnna&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true)
 
-![GitHub Streak](https://nirzak-streak-stats.vercel.app/?user=krishhnnna&theme=tokyonight&hide_border=true)
+![GitHub Streak](https://streak-stats.demolab.com/?user=krishhnnna&theme=tokyonight&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=krishhnnna&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
+![Top Languages](https://github-readme-stats-salesp07.vercel.app/api/top-langs/?username=krishhnnna&theme=tokyonight&hide_border=true&layout=compact&langs_count=8)
 
 </div>
 
