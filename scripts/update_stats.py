@@ -190,70 +190,63 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
 
-    svg = f"""<svg width="495" height="290" viewBox="0 0 495 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-<style>
-  .title {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #70a5fd; }}
-  .label {{ font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #adbac7; }}
-  .value {{ font: 700 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e3b341; }}
-  .header {{ font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; }}
-  .total-label {{ font: 700 15px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f47067; }}
-  .total-value {{ font: 800 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #57ab5a; }}
-  .icon {{ font: 400 14px 'Segoe UI Emoji', 'Apple Color Emoji', Sans-Serif; }}
-</style>
+    svg = f"""<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .title {{ font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #7aa2f7; }}
+        .label {{ font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c0caf5; }}
+        .value {{ font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9ece6a; }}
+        .header {{ font: 600 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #bb9af7; }}
+        .total-label {{ font: 700 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f7768e; }}
+        .total-value {{ font: 800 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9ece6a; }}
+    </style>
+    
+    <rect x="0.5" y="0.5" width="599" height="299" rx="8" fill="#1a1b27" stroke="#383e59" stroke-width="1"/>
+    
+    <!-- Title -->
+    <text x="25" y="35" class="title">🏆 Competitive Programming Stats</text>
 
-<rect x="0.5" y="0.5" width="494" height="289" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <!-- Column Headers -->
+    <text x="30" y="70" class="header">Platform</text>
+    <text x="150" y="70" class="header">Profiles</text>
+    <text x="360" y="70" class="header">Rating (Max)</text>
+    <text x="520" y="70" class="header">Solved</text>
+    <line x1="25" y1="80" x2="575" y2="80" stroke="#383e59" stroke-width="1"/>
 
-<!-- Title -->
-<text x="25" y="32" class="title">🏆 Competitive Programming Stats</text>
-<text x="25" y="48" class="header">Auto-updated · {now}</text>
+    <!-- LeetCode -->
+    <text x="30" y="110" class="label">🟡 LeetCode</text>
+    <text x="150" y="110" class="label">{', '.join(s['username'] for s in lc_stats)}</text>
+    <text x="360" y="110" class="label">1919 (Knight)</text>
+    <text x="520" y="110" class="value">{lc_total}</text>
 
-<!-- Column Headers -->
-<text x="28" y="78" class="header">Platform</text>
-<text x="158" y="78" class="header">Handle(s)</text>
-<text x="310" y="78" class="header">Max Rating</text>
-<text x="430" y="78" class="header">Solved</text>
-<line x1="25" y1="86" x2="470" y2="86" stroke="#21262d" stroke-width="1"/>
+    <!-- Codeforces -->
+    <text x="30" y="140" class="label">🔵 Codeforces</text>
+    <text x="150" y="140" class="label">{', '.join(s['handle'] for s in cf_stats)}</text>
+    <text x="360" y="140" class="label">{best_cf} ({cf_rank_label(best_cf).split()[-1]})</text>
+    <text x="520" y="140" class="value">{cf_total}</text>
 
-<!-- LeetCode -->
-<text x="28" y="112" class="icon">🟡</text>
-<text x="48" y="112" class="label">LeetCode</text>
-<text x="158" y="112" class="label">{', '.join(s['username'] for s in lc_stats)}</text>
-<text x="310" y="112" class="label">1919 (Knight)</text>
-<text x="430" y="112" class="value">{lc_total}</text>
+    <!-- CodeChef -->
+    <text x="30" y="170" class="label">🟠 CodeChef</text>
+    <text x="150" y="170" class="label">hackker_69</text>
+    <text x="360" y="170" class="label">{cc_stats['rating']} ({cc_stats['stars']})</text>
+    <text x="520" y="170" class="value">{cc_total}</text>
 
-<!-- Codeforces -->
-<text x="28" y="140" class="icon">🔵</text>
-<text x="48" y="140" class="label">Codeforces</text>
-<text x="158" y="140" class="label">{', '.join(s['handle'] for s in cf_stats)}</text>
-<text x="310" y="140" class="label">{best_cf} ({cf_rank_label(best_cf).split()[-1]})</text>
-<text x="430" y="140" class="value">{cf_total}</text>
+    <!-- AtCoder -->
+    <text x="30" y="200" class="label">🔴 AtCoder</text>
+    <text x="150" y="200" class="label">krishnnna</text>
+    <text x="360" y="200" class="label">{at_stats['max_rating']} ({atcoder_rank_label(at_stats['max_rating']).split()[-1]})</text>
+    <text x="520" y="200" class="value">{at_total}</text>
 
-<!-- CodeChef -->
-<text x="28" y="168" class="icon">🟠</text>
-<text x="48" y="168" class="label">CodeChef</text>
-<text x="158" y="168" class="label">hackker_69</text>
-<text x="310" y="168" class="label">{cc_stats['rating']} ({cc_stats['stars']})</text>
-<text x="430" y="168" class="value">{cc_total}</text>
+    <!-- CSES & Others -->
+    <text x="30" y="230" class="label">🌐 CSES &amp; Others</text>
+    <text x="150" y="230" class="label">—</text>
+    <text x="360" y="230" class="label">—</text>
+    <text x="520" y="230" class="value">{cses_total + gfg_total}</text>
 
-<!-- AtCoder -->
-<text x="28" y="196" class="icon">🔴</text>
-<text x="48" y="196" class="label">AtCoder</text>
-<text x="158" y="196" class="label">krishnnna</text>
-<text x="310" y="196" class="label">{at_stats['max_rating']} ({atcoder_rank_label(at_stats['max_rating']).split()[-1]})</text>
-<text x="430" y="196" class="value">{at_total}</text>
+    <line x1="25" y1="245" x2="575" y2="245" stroke="#383e59" stroke-width="1"/>
 
-<!-- CSES & Others -->
-<text x="28" y="224" class="icon">🌐</text>
-<text x="48" y="224" class="label">CSES &amp; Others</text>
-<text x="158" y="224" class="label">—</text>
-<text x="310" y="224" class="label">—</text>
-<text x="430" y="224" class="value">{cses_total + gfg_total}</text>
-
-<line x1="25" y1="240" x2="470" y2="240" stroke="#21262d" stroke-width="1"/>
-
-<!-- Grand Total -->
-<text x="28" y="270" class="total-label">⚡ Grand Total</text>
-<text x="420" y="270" class="total-value">{grand_total}</text>
+    <!-- Grand Total -->
+    <text x="30" y="275" class="total-label">⚡ Grand Total</text>
+    <text x="520" y="275" class="total-value">{grand_total}</text>
 
 </svg>"""
 
