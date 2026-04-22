@@ -39,7 +39,7 @@
     <text x="180" y="140" class="label">Hackker_69, krishnnna</text>
     <text x="370" y="140" class="label">1623</text>
     <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Expert</text>
-    <text x="540" y="140" class="value">358</text>
+    <text x="540" y="140" class="value">359</text>
 
     <!-- CodeChef icon -->
     <g transform="translate(25, 156) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">1073</text>
+    <text x="520" y="275" class="total-value">1074</text>
 
 </svg>
