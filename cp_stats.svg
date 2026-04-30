@@ -29,7 +29,7 @@
     <text x="180" y="110" class="label">wtffff__, Hackker_69</text>
     <text x="370" y="110" class="label">1919</text>
     <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
-    <text x="540" y="110" class="value">447</text>
+    <text x="540" y="110" class="value">457</text>
 
     <!-- Codeforces icon -->
     <g transform="translate(25, 126) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">1080</text>
+    <text x="520" y="275" class="total-value">1090</text>
 
 </svg>
