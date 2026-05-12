@@ -32,6 +32,11 @@ def get_leetcode_stats(username):
                 acSubmissionNum { difficulty count }
             }
         }
+        userContestRanking(username: $username) {
+            rating
+            globalRanking
+            topPercentage
+        }
     }"""
     try:
         resp = requests.post(
@@ -41,17 +46,25 @@ def get_leetcode_stats(username):
                      "Referer": "https://leetcode.com"},
             timeout=15
         )
-        data = resp.json()["data"]["matchedUser"]
+        rjson = resp.json()["data"]
+        data = rjson["matchedUser"]
         ac = data["submitStats"]["acSubmissionNum"]
         total  = next(x["count"] for x in ac if x["difficulty"] == "All")
         easy   = next(x["count"] for x in ac if x["difficulty"] == "Easy")
         medium = next(x["count"] for x in ac if x["difficulty"] == "Medium")
         hard   = next(x["count"] for x in ac if x["difficulty"] == "Hard")
+
+        # Contest rating
+        contest = rjson.get("userContestRanking")
+        contest_rating = int(contest["rating"]) if contest and contest.get("rating") else 0
+
         return {"username": username, "total": total,
-                "easy": easy, "medium": medium, "hard": hard}
+                "easy": easy, "medium": medium, "hard": hard,
+                "contest_rating": contest_rating}
     except Exception as e:
         print(f"[LeetCode] Error for {username}: {e}")
-        return {"username": username, "total": 0, "easy": 0, "medium": 0, "hard": 0}
+        return {"username": username, "total": 0, "easy": 0, "medium": 0, "hard": 0,
+                "contest_rating": 0}
 
 
 # ──────────── CODEFORCES ─────────────
@@ -153,6 +166,14 @@ def get_atcoder_stats(username):
 
 
 # ──────────── HELPERS ────────────────
+def lc_rank_label(rating):
+    if   rating >= 2500: return "👑 Guardian"
+    elif rating >= 2200: return "🔴 Knight"
+    elif rating >= 1900: return "⚔️ Knight"
+    elif rating >= 1600: return "🟣 Knight"
+    elif rating >= 1400: return "🔵 Guardian"
+    else:                return "🟢 —"
+
 def cf_rank_label(rating):
     if   rating >= 3000: return "👑 Legendary GM"
     elif rating >= 2600: return "🔴 Int. Grandmaster"
@@ -189,6 +210,7 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     grand_total = lc_total + cf_total + cc_total + at_total + cses_total + gfg_total
 
     best_cf     = max(s["max_rating"] for s in cf_stats)
+    best_lc     = max(s["contest_rating"] for s in lc_stats)
 
     svg = f"""<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
@@ -219,8 +241,8 @@ def generate_svg_and_markdown(lc_stats, cf_stats, cc_stats, at_stats):
     </g>
     <text x="50" y="110" class="label">LeetCode</text>
     <text x="180" y="110" class="label">{', '.join(s['username'] for s in lc_stats)}</text>
-    <text x="370" y="110" class="label">1919</text>
-    <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
+    <text x="370" y="110" class="label">{best_lc}</text>
+    <text x="420" y="110" class="rank" fill="#e0af68">{lc_rank_label(best_lc)}</text>
     <text x="540" y="110" class="value">{lc_total}</text>
 
     <!-- Codeforces icon -->
@@ -339,7 +361,7 @@ if __name__ == "__main__":
 
     print("\n📊 Summary:")
     for s in lc_stats:
-        print(f"  LC  [{s['username']}]: {s['total']} solved")
+        print(f"  LC  [{s['username']}]: {s['total']} solved, contest rating {s['contest_rating']}")
     for s in cf_stats:
         print(f"  CF  [{s['handle']}]:  {s['solved']} solved, rating {s['rating']}")
     print(f"  CC  [{cc_stats['username']}]:   {cc_stats['solved']} solved, {cc_stats['rating']}")
