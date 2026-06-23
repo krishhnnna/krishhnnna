@@ -5,8 +5,8 @@ import os
 from bs4 import BeautifulSoup
 
 # ─────────────── CONFIG ───────────────
-LEETCODE_ACCOUNTS   = ["wtffff__", "Hackker_69"]
-CODEFORCES_ACCOUNTS = ["Hackker_69", "krishnnna"]
+LEETCODE_ACCOUNTS   = ["Hackker_69"]
+CODEFORCES_ACCOUNTS = ["Hackker_69"]
 CODECHEF_ACCOUNT    = "hackker_69"
 ATCODER_ACCOUNT     = "krishnnna"
 # CSES requires login to scrape — update manually when solved count changes
