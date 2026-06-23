@@ -25,18 +25,16 @@
 - ⚔️ **LeetCode Knight** (1955 max) · **1000+ problems** solved
 - 👯 Open to collaborate on **Open Source & Hackathons**
 - 💬 Ask me about **React, Python, FastAPI, Competitive Programming**
-- ⚡ Fun fact: I have **2 LeetCode accounts** because one wasn't enough
+- ⚡ Fun fact: I debug code faster than I debug my life choices 😅
 
 ---
 
 <!-- COMBINED_STATS_START -->
 <div align="center">
-  <img src="cp_stats.svg?v=1782181664" alt="Competitive Programming Stats" />
+  <img src="cp_stats.svg?v=1782196998" alt="Competitive Programming Stats" />
   <br/><br/>
-  <a href="https://leetcode.com/wtffff__"><img src="https://img.shields.io/badge/LC-wtffff__-FFA116?style=flat&logo=leetcode&logoColor=white" alt="wtffff__"/></a>
   <a href="https://leetcode.com/Hackker_69"><img src="https://img.shields.io/badge/LC-Hackker_69-FFA116?style=flat&logo=leetcode&logoColor=white" alt="Hackker_69"/></a>
   <a href="https://codeforces.com/profile/Hackker_69"><img src="https://img.shields.io/badge/CF-Hackker_69-1F8ACB?style=flat&logo=codeforces&logoColor=white" alt="Hackker_69"/></a>
-  <a href="https://codeforces.com/profile/krishnnna"><img src="https://img.shields.io/badge/CF-krishnnna-1F8ACB?style=flat&logo=codeforces&logoColor=white" alt="krishnnna"/></a>
   <a href="https://www.codechef.com/users/hackker_69"><img src="https://img.shields.io/badge/CC-hackker__69-5B4638?style=flat&logo=codechef&logoColor=white" alt="CodeChef"/></a>
   <a href="https://atcoder.jp/users/krishnnna"><img src="https://img.shields.io/badge/AC-krishnnna-222222?style=flat&logo=atcoder&logoColor=white" alt="AtCoder"/></a>
   <a href="https://cses.fi/problemset/user/338950/"><img src="https://img.shields.io/badge/CSES-338950-1a1a2e?style=flat" alt="CSES"/></a>
