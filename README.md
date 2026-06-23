@@ -22,7 +22,7 @@
 
 - 🔭 Currently building **CodePulse** — a unified CP dashboard across all platforms
 - 🌱 Levelling up in **System Design & Advanced Algorithms**
-- ⚔️ **LeetCode Knight** (1955 max) · **1000+ problems** solved
+- ⚔️ **LeetCode Knight** (1955 max) · **600+ problems** solved across all platforms
 - 👯 Open to collaborate on **Open Source & Hackathons**
 - 💬 Ask me about **React, Python, FastAPI, Competitive Programming**
 - ⚡ Fun fact: I debug code faster than I debug my life choices 😅
