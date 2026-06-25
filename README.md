@@ -31,7 +31,7 @@
 
 <!-- COMBINED_STATS_START -->
 <div align="center">
-  <img src="cp_stats.svg?v=1782268141" alt="Competitive Programming Stats" />
+  <img src="cp_stats.svg?v=1782354631" alt="Competitive Programming Stats" />
   <br/><br/>
   <a href="https://leetcode.com/Hackker_69"><img src="https://img.shields.io/badge/LC-Hackker_69-FFA116?style=flat&logo=leetcode&logoColor=white" alt="Hackker_69"/></a>
   <a href="https://codeforces.com/profile/Hackker_69"><img src="https://img.shields.io/badge/CF-Hackker_69-1F8ACB?style=flat&logo=codeforces&logoColor=white" alt="Hackker_69"/></a>

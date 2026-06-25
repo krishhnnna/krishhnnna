@@ -37,9 +37,9 @@
     </g>
     <text x="50" y="140" class="label">Codeforces</text>
     <text x="180" y="140" class="label">Hackker_69</text>
-    <text x="370" y="140" class="label">1364</text>
-    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Pupil</text>
-    <text x="540" y="140" class="value">141</text>
+    <text x="370" y="140" class="label">0</text>
+    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Newbie</text>
+    <text x="540" y="140" class="value">0</text>
 
     <!-- CodeChef icon -->
     <g transform="translate(25, 156) scale(0.65)">
@@ -47,9 +47,9 @@
     </g>
     <text x="50" y="170" class="label">CodeChef</text>
     <text x="180" y="170" class="label">hackker_69</text>
-    <text x="370" y="170" class="label">1577</text>
-    <text x="420" y="170" class="rank" fill="#e0af68">2★</text>
-    <text x="540" y="170" class="value">54</text>
+    <text x="370" y="170" class="label">1608</text>
+    <text x="420" y="170" class="rank" fill="#e0af68">3★</text>
+    <text x="540" y="170" class="value">59</text>
 
     <!-- AtCoder icon (simple "A" mark) -->
     <g transform="translate(25, 186) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">628</text>
+    <text x="520" y="275" class="total-value">492</text>
 
 </svg>
