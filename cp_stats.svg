@@ -27,7 +27,7 @@
     </g>
     <text x="50" y="110" class="label">LeetCode</text>
     <text x="180" y="110" class="label">Hackker_69</text>
-    <text x="370" y="110" class="label">1929</text>
+    <text x="370" y="110" class="label">1980</text>
     <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
     <text x="540" y="110" class="value">208</text>
 
@@ -37,9 +37,9 @@
     </g>
     <text x="50" y="140" class="label">Codeforces</text>
     <text x="180" y="140" class="label">Hackker_69</text>
-    <text x="370" y="140" class="label">0</text>
-    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Newbie</text>
-    <text x="540" y="140" class="value">0</text>
+    <text x="370" y="140" class="label">1364</text>
+    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Pupil</text>
+    <text x="540" y="140" class="value">141</text>
 
     <!-- CodeChef icon -->
     <g transform="translate(25, 156) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">492</text>
+    <text x="520" y="275" class="total-value">633</text>
 
 </svg>
