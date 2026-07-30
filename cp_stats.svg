@@ -29,7 +29,7 @@
     <text x="180" y="110" class="label">Hackker_69</text>
     <text x="370" y="110" class="label">1961</text>
     <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
-    <text x="540" y="110" class="value">250</text>
+    <text x="540" y="110" class="value">252</text>
 
     <!-- Codeforces icon -->
     <g transform="translate(25, 126) scale(0.65)">
@@ -47,7 +47,7 @@
     </g>
     <text x="50" y="170" class="label">CodeChef</text>
     <text x="180" y="170" class="label">hackker_69</text>
-    <text x="370" y="170" class="label">1586</text>
+    <text x="370" y="170" class="label">1587</text>
     <text x="420" y="170" class="rank" fill="#e0af68">2★</text>
     <text x="540" y="170" class="value">67</text>
 
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">705</text>
+    <text x="520" y="275" class="total-value">707</text>
 
 </svg>
