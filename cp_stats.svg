@@ -29,7 +29,7 @@
     <text x="180" y="110" class="label">Hackker_69</text>
     <text x="370" y="110" class="label">1926</text>
     <text x="420" y="110" class="rank" fill="#e0af68">⚔️ Knight</text>
-    <text x="540" y="110" class="value">295</text>
+    <text x="540" y="110" class="value">297</text>
 
     <!-- Codeforces icon -->
     <g transform="translate(25, 126) scale(0.65)">
@@ -39,7 +39,7 @@
     <text x="180" y="140" class="label">Hackker_69</text>
     <text x="370" y="140" class="label">1364</text>
     <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Pupil</text>
-    <text x="540" y="140" class="value">169</text>
+    <text x="540" y="140" class="value">173</text>
 
     <!-- CodeChef icon -->
     <g transform="translate(25, 156) scale(0.65)">
@@ -58,9 +58,9 @@
     </g>
     <text x="50" y="200" class="label">AtCoder</text>
     <text x="180" y="200" class="label">krishnnna</text>
-    <text x="370" y="200" class="label">747</text>
-    <text x="420" y="200" class="rank" fill="#bb9af7">Brown</text>
-    <text x="540" y="200" class="value">104</text>
+    <text x="370" y="200" class="label">0</text>
+    <text x="420" y="200" class="rank" fill="#bb9af7">Gray</text>
+    <text x="540" y="200" class="value">0</text>
 
     <!-- CSES & Others icon (globe) -->
     <g transform="translate(25, 216) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">763</text>
+    <text x="520" y="275" class="total-value">665</text>
 
 </svg>
