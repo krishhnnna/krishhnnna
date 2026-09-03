@@ -37,9 +37,9 @@
     </g>
     <text x="50" y="140" class="label">Codeforces</text>
     <text x="180" y="140" class="label">Hackker_69</text>
-    <text x="370" y="140" class="label">1364</text>
-    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Pupil</text>
-    <text x="540" y="140" class="value">173</text>
+    <text x="370" y="140" class="label">0</text>
+    <text x="420" y="140" class="rank" fill="#7aa2f7">🔵 Newbie</text>
+    <text x="540" y="140" class="value">0</text>
 
     <!-- CodeChef icon -->
     <g transform="translate(25, 156) scale(0.65)">
@@ -47,9 +47,9 @@
     </g>
     <text x="50" y="170" class="label">CodeChef</text>
     <text x="180" y="170" class="label">hackker_69</text>
-    <text x="370" y="170" class="label">1583</text>
+    <text x="370" y="170" class="label">1549</text>
     <text x="420" y="170" class="rank" fill="#e0af68">2★</text>
-    <text x="540" y="170" class="value">71</text>
+    <text x="540" y="170" class="value">74</text>
 
     <!-- AtCoder icon (simple "A" mark) -->
     <g transform="translate(25, 186) scale(0.65)">
@@ -58,9 +58,9 @@
     </g>
     <text x="50" y="200" class="label">AtCoder</text>
     <text x="180" y="200" class="label">krishnnna</text>
-    <text x="370" y="200" class="label">0</text>
-    <text x="420" y="200" class="rank" fill="#bb9af7">Gray</text>
-    <text x="540" y="200" class="value">0</text>
+    <text x="370" y="200" class="label">747</text>
+    <text x="420" y="200" class="rank" fill="#bb9af7">Brown</text>
+    <text x="540" y="200" class="value">104</text>
 
     <!-- CSES & Others icon (globe) -->
     <g transform="translate(25, 216) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">665</text>
+    <text x="520" y="275" class="total-value">599</text>
 
 </svg>
