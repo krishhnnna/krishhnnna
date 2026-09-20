@@ -49,7 +49,7 @@
     <text x="180" y="170" class="label">hackker_69</text>
     <text x="370" y="170" class="label">1527</text>
     <text x="420" y="170" class="rank" fill="#e0af68">2★</text>
-    <text x="540" y="170" class="value">93</text>
+    <text x="540" y="170" class="value">94</text>
 
     <!-- AtCoder icon (simple "A" mark) -->
     <g transform="translate(25, 186) scale(0.65)">
@@ -60,7 +60,7 @@
     <text x="180" y="200" class="label">krishnnna</text>
     <text x="370" y="200" class="label">747</text>
     <text x="420" y="200" class="rank" fill="#bb9af7">Brown</text>
-    <text x="540" y="200" class="value">104</text>
+    <text x="540" y="200" class="value">105</text>
 
     <!-- CSES & Others icon (globe) -->
     <g transform="translate(25, 216) scale(0.65)">
@@ -78,6 +78,6 @@
 
     <!-- Grand Total -->
     <text x="30" y="275" class="total-label">⚡ Grand Total</text>
-    <text x="520" y="275" class="total-value">803</text>
+    <text x="520" y="275" class="total-value">805</text>
 
 </svg>
